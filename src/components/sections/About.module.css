@@ -1,0 +1,211 @@
+.aboutSection {
+  overflow: hidden;
+}
+
+.ambientGlow {
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle, rgba(244, 119, 33, 0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.aboutContainer {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2.5rem;
+  align-items: start;
+}
+
+.leadQuote {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--color-brand-white);
+  line-height: 1.7;
+  margin-bottom: 1.25rem;
+  padding: 1.15rem 1.25rem;
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--color-border-dark);
+  border-left: 3px solid var(--color-brand-orange);
+  border-radius: 0 var(--radius-md) var(--radius-md) 0;
+}
+
+.bodyText {
+  font-size: 0.96rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.7;
+  margin-bottom: 1.75rem;
+}
+
+.audienceBox {
+  background-color: var(--color-surface-dark);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: 1.35rem;
+  margin-bottom: 1.75rem;
+}
+
+.audienceTitle {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-orange);
+  margin-bottom: 0.9rem;
+}
+
+.audienceTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.audienceTag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  background-color: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--color-border-dark);
+  color: var(--color-brand-white);
+  font-size: 0.84rem;
+  font-weight: 500;
+  padding: 0.42rem 0.85rem;
+  border-radius: var(--radius-pill);
+}
+
+.audienceTag svg {
+  color: var(--color-brand-orange);
+  flex-shrink: 0;
+}
+
+.ctaRow {
+  margin-top: 1.5rem;
+}
+
+.pillarsColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.pillarsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.pillarCard {
+  background: linear-gradient(160deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.015) 100%);
+  border: 1px solid var(--color-border-dark);
+  border-radius: var(--radius-lg);
+  padding: 1.4rem;
+  transition: border-color var(--transition-fast), transform var(--transition-fast);
+}
+
+.pillarCard:hover {
+  border-color: var(--color-brand-orange-border);
+  transform: translateY(-2px);
+}
+
+.pillarTop {
+  margin-bottom: 0.85rem;
+}
+
+.pillarIndex {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-heading);
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--color-brand-orange);
+  background-color: var(--color-brand-orange-soft);
+  border: 1px solid var(--color-brand-orange-border);
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+}
+
+.pillarTitle {
+  font-size: 1.06rem;
+  font-weight: 700;
+  color: var(--color-brand-white);
+  margin-bottom: 0.45rem;
+}
+
+.pillarDesc {
+  font-size: 0.9rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.55;
+}
+
+.commitmentBanner {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.35rem;
+  background-color: rgba(244, 119, 33, 0.09);
+  border: 1px solid var(--color-brand-orange-border);
+  border-radius: var(--radius-lg);
+}
+
+.commitmentIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: var(--radius-md);
+  background-color: var(--color-brand-orange);
+  color: var(--color-brand-black);
+  flex-shrink: 0;
+}
+
+.commitmentBanner strong {
+  display: block;
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-brand-white);
+  margin-bottom: 0.25rem;
+}
+
+.commitmentBanner p {
+  font-size: 0.89rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.55;
+}
+
+@media (min-width: 640px) {
+  .leadQuote {
+    font-size: 1.12rem;
+    padding: 1.35rem 1.5rem;
+  }
+
+  .bodyText {
+    font-size: 1rem;
+  }
+
+  .audienceBox {
+    padding: 1.5rem;
+  }
+
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .pillarCard,
+  .commitmentBanner {
+    padding: 1.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .aboutContainer {
+    grid-template-columns: 1.05fr 0.95fr;
+    gap: 3.5rem;
+  }
+}

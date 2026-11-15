@@ -1,0 +1,25 @@
+{
+  "name": "adm-construcoes-reformas",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Site institucional da ADM Construções e Reformas em Geral - Zona Leste de São Paulo, SP",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "lint": "tsc --noEmit",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "@vitejs/plugin-react": "^4.3.4",
+    "typescript": "~5.6.2",
+    "vite": "^6.0.1"
+  }
+}
+

@@ -1,0 +1,96 @@
+.logoLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  text-decoration: none;
+  user-select: none;
+  min-width: 0;
+}
+
+.logoImage {
+  width: 2.75rem;
+  height: 2.75rem;
+  object-fit: contain;
+  border-radius: 10px;
+  background-color: #000000;
+  border: 1px solid rgba(244, 119, 33, 0.25);
+  padding: 2px;
+  flex-shrink: 0;
+  transition: border-color var(--transition-fast);
+}
+
+.logoLink:hover .logoImage {
+  border-color: var(--color-brand-orange);
+}
+
+.footer .logoImage {
+  width: 4.5rem;
+  height: 4.5rem;
+  border-radius: 14px;
+  padding: 4px;
+}
+
+.brandTextGroup {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+  min-width: 0;
+}
+
+.brandTitle {
+  font-family: var(--font-heading);
+  font-size: 0.98rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  color: var(--color-brand-white);
+  white-space: nowrap;
+}
+
+.brandSub {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-brand-orange);
+  margin-top: 0.1rem;
+  white-space: nowrap;
+}
+
+.light .brandTitle {
+  color: var(--color-brand-black);
+}
+
+@media (min-width: 480px) {
+  .logoLink {
+    gap: 0.8rem;
+  }
+
+  .logoImage {
+    width: 3rem;
+    height: 3rem;
+  }
+
+  .footer .logoImage {
+    width: 5.25rem;
+    height: 5.25rem;
+  }
+
+  .brandTitle {
+    font-size: 1.08rem;
+  }
+
+  .brandSub {
+    font-size: 0.68rem;
+  }
+}
+
+@media (max-width: 340px) {
+  .brandTitle {
+    font-size: 0.88rem;
+  }
+
+  .brandSub {
+    font-size: 0.58rem;
+  }
+}

@@ -1,0 +1,272 @@
+.filterBar {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  gap: 0.5rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 0.5rem;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+
+.filterBtn {
+  font-family: var(--font-body);
+  font-size: 0.84rem;
+  font-weight: 600;
+  padding: 0.55rem 1.05rem;
+  border-radius: var(--radius-pill);
+  border: 1px solid var(--color-border-light-strong);
+  background-color: var(--color-surface-light);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+  flex-shrink: 0;
+  transition:
+    background-color var(--transition-fast),
+    color var(--transition-fast),
+    border-color var(--transition-fast);
+}
+
+.filterBtn:hover {
+  border-color: var(--color-brand-orange);
+  color: var(--color-brand-black);
+}
+
+.filterBtnActive {
+  background-color: var(--color-brand-black);
+  color: var(--color-brand-white);
+  border-color: var(--color-brand-black);
+}
+
+.filterBtnActive:hover {
+  color: var(--color-brand-orange);
+}
+
+.galleryGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.35rem;
+}
+
+.portfolioCard {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--color-surface-light);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-xs);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
+}
+
+.portfolioCard:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: rgba(244, 119, 33, 0.35);
+}
+
+.mediaArea {
+  position: relative;
+  aspect-ratio: 16 / 10;
+  background-color: #161616;
+  overflow: hidden;
+}
+
+.realPhoto {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.placeholderBox {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  text-align: center;
+  background: radial-gradient(circle at center, #222222 0%, #151515 100%);
+  background-image:
+    linear-gradient(to right, rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
+/* Marcas arquitetônicas de enquadramento */
+.viewfinderCornerTL,
+.viewfinderCornerTR,
+.viewfinderCornerBL,
+.viewfinderCornerBR {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-color: rgba(244, 119, 33, 0.45);
+  border-style: solid;
+  pointer-events: none;
+}
+
+.viewfinderCornerTL {
+  top: 12px;
+  left: 12px;
+  border-width: 2px 0 0 2px;
+}
+
+.viewfinderCornerTR {
+  top: 12px;
+  right: 12px;
+  border-width: 2px 2px 0 0;
+}
+
+.viewfinderCornerBL {
+  bottom: 12px;
+  left: 12px;
+  border-width: 0 0 2px 2px;
+}
+
+.viewfinderCornerBR {
+  bottom: 12px;
+  right: 12px;
+  border-width: 0 2px 2px 0;
+}
+
+.placeholderIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.85rem;
+  height: 2.85rem;
+  border-radius: var(--radius-md);
+  background-color: rgba(244, 119, 33, 0.12);
+  border: 1px solid rgba(244, 119, 33, 0.25);
+  color: var(--color-brand-orange);
+  margin-bottom: 0.65rem;
+}
+
+.placeholderBadge {
+  font-family: var(--font-heading);
+  font-size: 0.76rem;
+  font-weight: 600;
+  color: var(--color-brand-white);
+  background-color: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 0.25rem 0.7rem;
+  border-radius: var(--radius-pill);
+  margin-bottom: 0.35rem;
+}
+
+.placeholderHint {
+  font-size: 0.76rem;
+  color: var(--color-text-on-dark-muted);
+}
+
+.categoryBadge {
+  position: absolute;
+  top: 0.85rem;
+  left: 0.85rem;
+  background-color: var(--color-brand-orange);
+  color: var(--color-brand-black);
+  font-family: var(--font-body);
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-pill);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+}
+
+.cardBody {
+  padding: 1.25rem 1.35rem;
+}
+
+.locationText {
+  display: block;
+  font-size: 0.76rem;
+  font-weight: 700;
+  color: var(--color-brand-orange-hover);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin-bottom: 0.35rem;
+}
+
+.itemTitle {
+  font-size: 1.08rem;
+  font-weight: 700;
+  color: var(--color-brand-black);
+  margin-bottom: 0.45rem;
+}
+
+.itemDescription {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary);
+  line-height: 1.55;
+}
+
+.portfolioCtaBox {
+  margin-top: 2.5rem;
+  padding: 1.75rem 1.35rem;
+  background: linear-gradient(135deg, #171717 0%, #111111 100%);
+  color: var(--color-brand-white);
+  border: 1px solid var(--color-border-dark-strong);
+  border-radius: var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: 1.35rem;
+  align-items: stretch;
+  justify-content: space-between;
+  box-shadow: var(--shadow-md);
+}
+
+.ctaEyebrow {
+  display: inline-block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-orange);
+  margin-bottom: 0.35rem;
+}
+
+.portfolioCtaText h3 {
+  font-size: 1.28rem;
+  margin-bottom: 0.4rem;
+}
+
+.portfolioCtaText p {
+  font-size: 0.93rem;
+  color: var(--color-text-on-dark-muted);
+  max-width: 600px;
+}
+
+.portfolioCtaAction {
+  flex-shrink: 0;
+}
+
+@media (min-width: 640px) {
+  .filterBar {
+    flex-wrap: wrap;
+    overflow-x: visible;
+    padding-bottom: 0;
+    margin-bottom: 2.25rem;
+  }
+
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+
+  .portfolioCtaBox {
+    padding: 2rem 2.25rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .galleryGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .portfolioCtaBox {
+    flex-direction: row;
+    align-items: center;
+  }
+}

@@ -1,0 +1,187 @@
+.contactShell {
+  display: grid;
+  grid-template-columns: 1fr;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  border: 1px solid var(--color-border-light);
+  box-shadow: var(--shadow-md);
+  background-color: var(--color-surface-light);
+}
+
+.mainCard {
+  background-color: var(--color-surface-light);
+  padding: 1.75rem 1.25rem;
+}
+
+.tipsBox {
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-border-light);
+  border-radius: var(--radius-lg);
+  padding: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.tipsTitle {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-brand-black);
+  margin-bottom: 1rem;
+}
+
+.tipsTitle svg {
+  color: var(--color-brand-orange);
+  flex-shrink: 0;
+}
+
+.tipsList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tipsList li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.65rem;
+  font-size: 0.91rem;
+  color: var(--color-text-secondary);
+}
+
+.tipIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.35rem;
+  height: 1.35rem;
+  border-radius: 50%;
+  background-color: var(--color-brand-orange-soft);
+  color: var(--color-brand-orange);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.ctaArea {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.9rem;
+}
+
+.pendingPhoneNotice {
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  background-color: var(--color-brand-white);
+  border: 1px solid var(--color-border-light);
+  padding: 0.65rem 0.9rem;
+  border-radius: var(--radius-sm);
+}
+
+.infoSidebar {
+  background: linear-gradient(165deg, #171717 0%, #101010 100%);
+  color: var(--color-brand-white);
+  padding: 1.75rem 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.sidebarHeader {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.sidebarTag {
+  display: inline-block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--color-brand-orange);
+  margin-bottom: 0.25rem;
+}
+
+.sidebarHeader h3 {
+  font-size: 1.25rem;
+  color: var(--color-brand-white);
+}
+
+.infoList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.infoBlock {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  padding-bottom: 1.15rem;
+  border-bottom: 1px solid var(--color-border-dark);
+}
+
+.infoBlock:last-child {
+  padding-bottom: 0;
+  border-bottom: none;
+}
+
+.infoIcon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.35rem;
+  height: 2.35rem;
+  border-radius: var(--radius-sm);
+  background-color: rgba(244, 119, 33, 0.14);
+  color: var(--color-brand-orange);
+  flex-shrink: 0;
+}
+
+.infoLabel {
+  display: block;
+  font-size: 0.74rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--color-brand-orange);
+  margin-bottom: 0.2rem;
+}
+
+.infoValue {
+  display: block;
+  font-size: 1rem;
+  color: var(--color-brand-white);
+  margin-bottom: 0.15rem;
+}
+
+.infoSub {
+  display: block;
+  font-size: 0.83rem;
+  color: var(--color-text-on-dark-muted);
+  line-height: 1.45;
+}
+
+@media (min-width: 640px) {
+  .ctaArea {
+    align-items: flex-start;
+  }
+
+  .mainCard,
+  .infoSidebar {
+    padding: 2.5rem;
+  }
+}
+
+@media (min-width: 992px) {
+  .contactShell {
+    grid-template-columns: 1.28fr 0.72fr;
+  }
+
+  .mainCard,
+  .infoSidebar {
+    padding: 3rem;
+  }
+}
