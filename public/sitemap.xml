@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>/</loc>
-    <changefreq>monthly</changefreq>
+    <loc>https://admconstrucoesereformas.com.br/</loc>
+    <lastmod>2026-11-17</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://admconstrucoesereformas.com.br/assets/logo/logo-adm.jpg</image:loc>
+      <image:title>ADM Construções e Reformas em Geral - Logotipo Oficial</image:title>
+      <image:caption>Serviços profissionais de construção civil e reformas em toda a Zona Leste de São Paulo</image:caption>
+    </image:image>
   </url>
 </urlset>
-

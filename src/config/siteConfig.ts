@@ -50,11 +50,11 @@ export const siteConfig = {
     heroImagePath: rawHeroImagePath,
   },
   seo: {
-    siteUrl: rawSiteUrl,
+    siteUrl: rawSiteUrl || 'https://admconstrucoesereformas.com.br',
     title:
-      'ADM Construções e Reformas em Geral | Pedreiro e Reformas na Zona Leste de SP',
+      'ADM Construções e Reformas em Geral | Zona Leste de São Paulo',
     description:
-      'Serviços de construção, reformas residenciais e comerciais, alvenaria, pisos, pintura e manutenção em toda a Zona Leste de São Paulo. Atendimento direto com Ademir. Solicite orçamento gratuito pelo WhatsApp.',
+      'Construção civil e reformas residenciais e comerciais na Zona Leste de SP. Atendimento direto com Ademir. Solicite seu orçamento gratuito pelo WhatsApp!',
     keywords: [
       'Construção e reformas na Zona Leste',
       'Pedreiro na Zona Leste de São Paulo',
@@ -63,6 +63,9 @@ export const siteConfig = {
       'Serviços de construção civil',
       'Orçamento gratuito para reformas',
       'Construção e reforma em geral',
+      'Reforma de banheiro Zona Leste',
+      'Reforma de cozinha Zona Leste',
+      'Pintura e pisos Zona Leste SP',
     ],
   },
   analytics: {

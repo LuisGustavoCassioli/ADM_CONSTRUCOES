@@ -1,0 +1,28 @@
+{
+  "name": "ADM Construções e Reformas em Geral",
+  "short_name": "ADM Construções",
+  "description": "Serviços de construção civil, reformas residenciais e comerciais e manutenção predial em toda a Zona Leste de São Paulo.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#171717",
+  "theme_color": "#F47721",
+  "lang": "pt-BR",
+  "dir": "ltr",
+  "categories": ["business", "utilities", "lifestyle"],
+  "icons": [
+    {
+      "src": "/assets/logo/logo-adm.jpg",
+      "sizes": "192x192 512x512 1024x1024",
+      "type": "image/jpeg",
+      "purpose": "any"
+    },
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

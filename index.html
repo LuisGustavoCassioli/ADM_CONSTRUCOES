@@ -4,40 +4,63 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#171717" />
+    <meta name="msapplication-TileColor" content="#171717" />
 
-    <!-- SEO Principal -->
+    <!-- SEO Principal — Otimizado para Google Search Console e SERP -->
     <title>ADM Construções e Reformas em Geral | Zona Leste de São Paulo</title>
     <meta
       name="description"
-      content="Serviços de construção, reformas residenciais e comerciais, alvenaria, pisos, pintura, telhados e manutenção em toda a Zona Leste de São Paulo. Atendimento direto com Ademir. Solicite orçamento gratuito pelo WhatsApp."
+      content="Construção civil e reformas residenciais e comerciais na Zona Leste de SP. Atendimento direto com Ademir. Solicite seu orçamento gratuito pelo WhatsApp!"
     />
     <meta
       name="keywords"
-      content="Construção e reformas na Zona Leste, Pedreiro na Zona Leste de São Paulo, Reformas residenciais em São Paulo, Reformas comerciais na Zona Leste, Serviços de construção civil, Orçamento gratuito para reformas, Construção e reforma em geral"
+      content="Construção e reformas na Zona Leste, Pedreiro na Zona Leste de São Paulo, Reformas residenciais em São Paulo, Reformas comerciais na Zona Leste, Serviços de construção civil, Orçamento gratuito para reformas, Construção e reforma em geral, Reforma de banheiro Zona Leste, Reforma de cozinha Zona Leste, Pintura e pisos Zona Leste SP"
     />
     <meta name="author" content="ADM Construções e Reformas em Geral - Ademir" />
-    <meta name="robots" content="index, follow" />
+    <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+
+    <!-- Geolocalização Local SEO (São Paulo — Zona Leste) -->
     <meta name="geo.region" content="BR-SP" />
     <meta name="geo.placename" content="São Paulo - Zona Leste" />
+    <meta name="geo.position" content="-23.5505;-46.5333" />
+    <meta name="ICBM" content="-23.5505, -46.5333" />
 
-    <!-- Favicon -->
+    <!-- URL Canônica (Requisito mandatório para Google Search Console) -->
+    <link rel="canonical" href="https://admconstrucoesereformas.com.br/" />
+
+    <!-- Google Search Console (Insira o código de validação fornecido no painel do GSC) -->
+    <meta name="google-site-verification" content="" />
+
+    <!-- Favicon & PWA / Web App Manifest -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="icon" type="image/jpeg" href="/assets/logo/logo-adm.jpg" />
     <link rel="apple-touch-icon" href="/assets/logo/logo-adm.jpg" />
+    <link rel="manifest" href="/manifest.json" />
+    <meta name="application-name" content="ADM Construções" />
+    <meta name="apple-mobile-web-app-title" content="ADM Construções" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
 
-    <!-- Open Graph / Compartilhamento Social -->
-    <meta property="og:type" content="website" />
+    <!-- Open Graph / Redes Sociais / WhatsApp Preview -->
     <meta property="og:locale" content="pt_BR" />
+    <meta property="og:type" content="website" />
     <meta property="og:site_name" content="ADM Construções e Reformas em Geral" />
-    <meta property="og:image" content="/assets/logo/logo-adm.jpg" />
-    <meta property="og:image:alt" content="Logotipo ADM Construções e Reformas em Geral" />
     <meta
       property="og:title"
-      content="ADM Construções e Reformas em Geral | Construção e Reformas na Zona Leste de SP"
+      content="ADM Construções e Reformas em Geral | Zona Leste de SP"
     />
     <meta
       property="og:description"
-      content="Construção, reformas residenciais e comerciais e manutenção em toda a Zona Leste de São Paulo com aproximadamente 10 anos de experiência. Solicite seu orçamento gratuito pelo WhatsApp."
+      content="Construção civil e reformas residenciais e comerciais na Zona Leste de São Paulo. Atendimento direto com Ademir. Solicite seu orçamento gratuito!"
     />
+    <meta property="og:url" content="https://admconstrucoesereformas.com.br/" />
+    <meta property="og:image" content="https://admconstrucoesereformas.com.br/assets/logo/logo-adm.jpg" />
+    <meta property="og:image:secure_url" content="https://admconstrucoesereformas.com.br/assets/logo/logo-adm.jpg" />
+    <meta property="og:image:type" content="image/jpeg" />
+    <meta property="og:image:width" content="1024" />
+    <meta property="og:image:height" content="1024" />
+    <meta property="og:image:alt" content="Logotipo oficial da ADM Construções e Reformas em Geral" />
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -47,8 +70,10 @@
     />
     <meta
       name="twitter:description"
-      content="Serviços de construção, reformas e manutenção para imóveis residenciais e comerciais em toda a Zona Leste de São Paulo. Orçamento gratuito pelo WhatsApp."
+      content="Construção civil e reformas na Zona Leste de SP. Atendimento direto com Ademir. Orçamento gratuito pelo WhatsApp."
     />
+    <meta name="twitter:image" content="https://admconstrucoesereformas.com.br/assets/logo/logo-adm.jpg" />
+    <meta name="twitter:image:alt" content="Logotipo oficial da ADM Construções e Reformas em Geral" />
 
     <!-- Tipografia Google Fonts (Sora + Plus Jakarta Sans) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -58,61 +83,212 @@
       rel="stylesheet"
     />
 
-    <!-- Dados Estruturados Schema.org (HomeAndConstructionBusiness) -->
-    <!-- Sem endereço físico, CNPJ ou avaliações fictícias -->
+    <!-- ============================================================================== -->
+    <!-- DADOS ESTRUTURADOS SCHEMA.ORG (JSON-LD) — GOOGLE RICH RESULTS & LOCAL SEARCH  -->
+    <!-- ============================================================================== -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "HomeAndConstructionBusiness",
-        "name": "ADM Construções e Reformas em Geral",
-        "image": "/assets/logo/logo-adm.jpg",
-        "logo": "/assets/logo/logo-adm.jpg",
-        "description": "Serviços de construção, reformas residenciais e comerciais e manutenção em geral conduzidos diretamente por Ademir em toda a Zona Leste de São Paulo.",
-        "founder": {
-          "@type": "Person",
-          "name": "Ademir",
-          "jobTitle": "Profissional de Construção e Reformas"
-        },
-        "areaServed": {
-          "@type": "AdministrativeArea",
-          "name": "Zona Leste de São Paulo, SP",
-          "containedInPlace": {
-            "@type": "City",
-            "name": "São Paulo",
-            "addressRegion": "SP",
-            "addressCountry": "BR"
-          }
-        },
-        "paymentAccepted": ["Pix", "Dinheiro"],
-        "currenciesAccepted": "BRL",
-        "makesOffer": [
+        "@graph": [
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Construção e Alvenaria"
+            "@type": "WebSite",
+            "@id": "https://admconstrucoesereformas.com.br/#website",
+            "url": "https://admconstrucoesereformas.com.br/",
+            "name": "ADM Construções e Reformas em Geral",
+            "description": "Site institucional e solicitação de orçamento de construção e reformas na Zona Leste de São Paulo.",
+            "inLanguage": "pt-BR"
+          },
+          {
+            "@type": ["HomeAndConstructionBusiness", "ProfessionalService"],
+            "@id": "https://admconstrucoesereformas.com.br/#business",
+            "name": "ADM Construções e Reformas em Geral",
+            "alternateName": "ADM Construções",
+            "url": "https://admconstrucoesereformas.com.br/",
+            "logo": "https://admconstrucoesereformas.com.br/assets/logo/logo-adm.jpg",
+            "image": "https://admconstrucoesereformas.com.br/assets/logo/logo-adm.jpg",
+            "description": "Serviços profissionais de construção civil, reformas residenciais e comerciais, alvenaria, pisos, pintura e manutenção predial em toda a Zona Leste de São Paulo. Acompanhamento direto de Ademir do início ao fim.",
+            "founder": {
+              "@type": "Person",
+              "name": "Ademir",
+              "jobTitle": "Profissional de Construção e Reformas"
+            },
+            "areaServed": [
+              {
+                "@type": "AdministrativeArea",
+                "name": "Zona Leste de São Paulo, SP",
+                "containedInPlace": {
+                  "@type": "City",
+                  "name": "São Paulo",
+                  "addressRegion": "SP",
+                  "addressCountry": "BR"
+                }
+              },
+              {
+                "@type": "City",
+                "name": "São Paulo"
+              }
+            ],
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "São Paulo",
+              "addressRegion": "SP",
+              "addressCountry": "BR"
+            },
+            "priceRange": "$$",
+            "paymentAccepted": ["Pix", "Dinheiro"],
+            "currenciesAccepted": "BRL",
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+                "opens": "07:30",
+                "closes": "18:00"
+              }
+            ],
+            "knowsAbout": [
+              "Construção civil",
+              "Alvenaria",
+              "Reformas residenciais",
+              "Reformas comerciais",
+              "Assentamento de pisos e porcelanatos",
+              "Pintura residencial e comercial",
+              "Manutenção de telhados",
+              "Acabamentos finos",
+              "Instalações e reparos hidráulicos",
+              "Instalações e pontos elétricos"
+            ],
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Serviços de Construção e Reformas ADM",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Construção e Alvenaria",
+                    "description": "Levantamento de paredes, muros, divisórias, contrapisos, reboco e estruturas de alvenaria na Zona Leste de SP."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Reformas Residenciais",
+                    "description": "Renovação completa ou parcial de casas e apartamentos, banheiros, cozinhas e áreas externas."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Reformas Comerciais",
+                    "description": "Adequação e reformas em lojas, salões, escritórios e pontos comerciais na Zona Leste."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pisos e Revestimentos",
+                    "description": "Assentamento de pisos cerâmicos, porcelanatos, azulejos e revestimentos com nivelamento de alta precisão."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Pintura",
+                    "description": "Preparação de superfícies, emassamento, lixamento e pintura interna e externa para imóveis."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Acabamentos",
+                    "description": "Instalação de rodapés, soleiras, peitoris, rejuntes e detalhes finais de obra."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Telhados",
+                    "description": "Manutenção de coberturas, substituição de telhas quebradas, calhas, rufos e reparos preventivos."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Hidráulica",
+                    "description": "Serviços hidráulicos em reformas, registros, torneiras, pontos de esgoto e reparo de vazamentos."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Elétrica",
+                    "description": "Troca de tomadas, interruptores, luminárias e adequações de pontos elétricos em reformas."
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Manutenção e Reparos em Geral",
+                    "description": "Pequenos reparos prediais, correção de trincas superficiais, ajustes e conservação patrimonial."
+                  }
+                }
+              ]
             }
           },
           {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Reformas Residenciais e Comerciais"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Pisos, Revestimentos, Pintura e Acabamentos"
-            }
-          },
-          {
-            "@type": "Offer",
-            "itemOffered": {
-              "@type": "Service",
-              "name": "Telhados e Manutenção em Geral"
-            }
+            "@type": "FAQPage",
+            "@id": "https://admconstrucoesereformas.com.br/#faq",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Como solicitar um orçamento com a ADM Construções e Reformas em Geral?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "O orçamento é 100% gratuito. Você pode entrar em contato diretamente pelo WhatsApp, explicar o serviço desejado, enviar fotos ou vídeos do local, ou agendar uma visita presencial técnica com o profissional Ademir na Zona Leste de São Paulo."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais regiões de São Paulo a ADM atende?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A ADM atende com foco em toda a Zona Leste de São Paulo — SP, prestando serviços para proprietários de casas, apartamentos, condomínios, lojas, escritórios e estabelecimentos comerciais."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Como funciona o fornecimento dos materiais para a obra ou reforma?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A cobrança da ADM refere-se exclusivamente à mão de obra especializada (por serviço fechado ou diária). Todos os materiais necessários para a execução são comprados e fornecidos pelo próprio cliente, garantindo total controle de custos."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Quais são as formas de pagamento aceitas pela ADM?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Os pagamentos são recebidos via Pix ou em dinheiro, acordados de forma transparente conforme o serviço executado. Não trabalhamos com cartões de crédito ou débito."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "A ADM realiza atendimentos emergenciais ou plantão 24 horas?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Não. Todos os atendimentos e serviços são realizados mediante agendamento prévio, garantindo dedicação exclusiva, pontualidade e acompanhamento direto de Ademir em sua obra."
+                }
+              }
+            ]
           }
         ]
       }
@@ -123,4 +299,3 @@
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
-

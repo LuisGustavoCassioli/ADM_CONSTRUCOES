@@ -1,17 +1,17 @@
 # ADM Construções e Reformas em Geral — Site Institucional
 
-Site institucional moderno, responsivo, acessível e otimizado para SEO local, desenvolvido para a **ADM Construções e Reformas em Geral**, marca conduzida pelo profissional autônomo **Ademir** na **Zona Leste de São Paulo — SP**.
+Site institucional moderno, responsivo, acessível e otimizado para SEO local e Google Search Console, desenvolvido para a **ADM Construções e Reformas em Geral**, marca conduzida pelo profissional autônomo **Ademir** na **Zona Leste de São Paulo — SP**.
 
 ---
 
 ## 1. Tecnologias Utilizadas
 
 - **React 18** + **TypeScript**
-- **Vite** (bundler rápido e otimizado)
+- **Vite** (bundler ultrarrápido com minificação e compressão otimizadas)
 - **HTML5 Semântico** e **CSS3 Modules** com Custom Properties (`#F47721`, `#171717`, `#F4F4F4`)
-- **SEO Técnico e Local** (Meta tags, Open Graph, Schema.org `HomeAndConstructionBusiness`, `sitemap.xml`, `robots.txt`)
-- **Arquitetura para Analytics** (Google Tag Manager, GA4, Microsoft Clarity)
-- **Configuração para Deploy na Vercel** (`vercel.json`)
+- **SEO Técnico Avançado e Local** (Meta tags, Open Graph, Twitter Cards, Schema.org JSON-LD com `HomeAndConstructionBusiness` e `FAQPage`, `robots.txt`, `sitemap.xml`, `manifest.json`)
+- **Arquitetura para Analytics e Marketing** (Google Search Console, Google Tag Manager, GA4, Microsoft Clarity)
+- **Configuração para Deploy na Vercel** (`vercel.json` com cache e headers de segurança)
 
 ---
 
@@ -29,9 +29,10 @@ Site institucional moderno, responsivo, acessível e otimizado para SEO local, d
    ```bash
    npm run dev
    ```
-4. Para gerar o build de produção:
+4. Para gerar e testar o build de produção:
    ```bash
    npm run build
+   npm run preview
    ```
 
 ---
@@ -49,7 +50,7 @@ VITE_DISPLAY_PHONE=(11) 9XXXX-XXXX
 Assim que configurado, todos os botões de orçamento e o botão flutuante passam a abrir diretamente a conversa no WhatsApp com mensagens personalizadas por serviço.
 
 ### 3.2. Logotipo Original da ADM
-Coloque o arquivo original da logo em `public/assets/logo/logo-adm.png` (ou defina o caminho em `VITE_LOGO_PATH`). O componente `<Logo />` carregará automaticamente a imagem original.
+A logo original já se encontra em `public/assets/logo/logo-adm.jpg`.
 
 ### 3.3. Fotografias Reais de Obras (Portfólio e Hero)
 - **Hero:** adicione a foto em `public/assets/` e preencha `VITE_HERO_IMAGE_PATH`.
@@ -58,3 +59,29 @@ Coloque o arquivo original da logo em `public/assets/logo/logo-adm.png` (ou defi
 ### 3.4. Confirmação de Serviços
 Em `src/data/services.ts`, cada categoria possui a flag `enabled: true/false` e `scopeNote`, permitindo ajustar rapidamente os serviços confirmados por Ademir.
 
+---
+
+## 4. Guia de SEO Técnico e Google Search Console
+
+O projeto foi totalmente estruturado para indexação máxima no Google e validação no **Google Search Console**:
+
+### 4.1. Verificação no Google Search Console
+Ao cadastrar o domínio no Search Console (por exemplo, `https://admconstrucoesereformas.com.br`):
+1. **Opção 1 (Tag HTML):** O Google fornecerá uma tag como `<meta name="google-site-verification" content="SEU_CODIGO_AQUI" />`. Basta colar o código no atributo `content` em `index.html` ou definir a variável `VITE_GSC_VERIFICATION=SEU_CODIGO_AQUI` no painel da Vercel / `.env`.
+2. **Opção 2 (Registro DNS):** Recomendado caso tenha acesso ao painel do domínio (Registro.br, Cloudflare, etc.).
+
+### 4.2. Envio do Sitemap XML
+Após verificar o site no Search Console:
+- Acesse o menu lateral **Sitemaps**.
+- No campo *Adicionar um novo sitemap*, digite apenas: `sitemap.xml`
+- Clique em **Enviar**.
+- O Google rastreará a URL canônica e indexará as imagens associadas.
+
+### 4.3. Arquivos de Indexação Implementados
+- `public/robots.txt`: orienta robôs de busca (Googlebot, Bingbot), bloqueia arquivos de código interno e aponta para o sitemap canônico.
+- `public/sitemap.xml`: arquivo XML no padrão oficial com namespace de imagens para indexação visual no Google Imagens.
+- `public/manifest.json`: manifesto PWA para navegadores móveis e desktop, com atalhos, tema e ícones.
+- `index.html` (JSON-LD): marcação estruturada completa com:
+  - `HomeAndConstructionBusiness` & `ProfessionalService` (dados da empresa, área de atendimento Zona Leste SP, formas de pagamento, catálogo de serviços).
+  - `FAQPage` (perguntas e respostas frequentes para gerar rich snippets com sanfonas expansíveis nos resultados de busca do Google).
+  - `WebSite` (identificação da entidade na web).
