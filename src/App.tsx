@@ -35,6 +35,21 @@ export const App: React.FC = () => {
       }
       ogUrlMeta.content = siteConfig.seo.siteUrl;
     }
+
+    // Se o telefone oficial for configurado, inclui dinamicamente no Schema JSON-LD
+    if (siteConfig.contact.displayPhone || siteConfig.contact.whatsappNumber) {
+      const scriptTag = document.querySelector<HTMLScriptElement>('script[type="application/ld+json"]');
+      if (scriptTag && scriptTag.textContent) {
+        try {
+          const schemaObj = JSON.parse(scriptTag.textContent);
+          schemaObj.telephone =
+            siteConfig.contact.displayPhone || `+${siteConfig.contact.whatsappNumber}`;
+          scriptTag.textContent = JSON.stringify(schemaObj, null, 2);
+        } catch {
+          // ignora falha de parse
+        }
+      }
+    }
   }, []);
 
   return (

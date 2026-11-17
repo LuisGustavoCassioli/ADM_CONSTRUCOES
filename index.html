@@ -23,13 +23,10 @@
     <!-- URL Canônica Oficial -->
     <link rel="canonical" href="https://admreformasemgeral.com.br/" />
 
-    <!-- Google Search Console (Insira o código de validação fornecido no painel do GSC) -->
-    <meta name="google-site-verification" content="" />
-
-    <!-- Favicon & PWA / Web App Manifest -->
+    <!-- Favicon & PWA / Web App Manifest com Ícones Dedicados -->
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" type="image/jpeg" href="/assets/logo/logo-adm.jpg" />
-    <link rel="apple-touch-icon" href="/assets/logo/logo-adm.jpg" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/assets/icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="/assets/icons/icon-192.png" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="application-name" content="ADM Construções" />
     <meta name="apple-mobile-web-app-title" content="ADM Construções" />
@@ -106,9 +103,22 @@
             "addressCountry": "BR"
           }
         },
-        "priceRange": "$$",
         "paymentAccepted": ["Pix", "Dinheiro"],
         "currenciesAccepted": "BRL",
+        "openingHoursSpecification": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+            "opens": "08:00",
+            "closes": "18:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "13:00"
+          }
+        ],
         "hasOfferCatalog": {
           "@type": "OfferCatalog",
           "name": "Serviços de Construção e Reformas ADM",
