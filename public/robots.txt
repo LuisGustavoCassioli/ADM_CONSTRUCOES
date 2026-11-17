@@ -1,21 +1,5 @@
-# ==============================================================================
-# ROBOTS.TXT — ADM CONSTRUÇÕES E REFORMAS EM GERAL
-# Configuração otimizada para Googlebot, Bingbot e Google Search Console
-# ==============================================================================
-
 User-agent: *
 Allow: /
-Allow: /assets/
-Allow: /manifest.json
-Allow: /favicon.svg
 
-# Diretrizes para indexação limpa (bloqueia código-fonte e scripts internos)
-Disallow: /src/
-Disallow: /node_modules/
-Disallow: /*.ts$
-Disallow: /*.tsx$
-Disallow: /*.json$
-Allow: /manifest.json
-
-# Localização do Sitemap XML Canônico (obrigatório para Google Search Console)
-Sitemap: https://admconstrucoesereformas.com.br/sitemap.xml
+# Sitemap oficial (Google Search Console)
+Sitemap: https://admreformasemgeral.com.br/sitemap.xml

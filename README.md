@@ -66,7 +66,7 @@ Em `src/data/services.ts`, cada categoria possui a flag `enabled: true/false` e 
 O projeto foi totalmente estruturado para indexação máxima no Google e validação no **Google Search Console**:
 
 ### 4.1. Verificação no Google Search Console
-Ao cadastrar o domínio no Search Console (por exemplo, `https://admconstrucoesereformas.com.br`):
+Ao cadastrar o domínio no Search Console (por exemplo, `https://admreformasemgeral.com.br`):
 1. **Opção 1 (Tag HTML):** O Google fornecerá uma tag como `<meta name="google-site-verification" content="SEU_CODIGO_AQUI" />`. Basta colar o código no atributo `content` em `index.html` ou definir a variável `VITE_GSC_VERIFICATION=SEU_CODIGO_AQUI` no painel da Vercel / `.env`.
 2. **Opção 2 (Registro DNS):** Recomendado caso tenha acesso ao painel do domínio (Registro.br, Cloudflare, etc.).
 
@@ -78,10 +78,7 @@ Após verificar o site no Search Console:
 - O Google rastreará a URL canônica e indexará as imagens associadas.
 
 ### 4.3. Arquivos de Indexação Implementados
-- `public/robots.txt`: orienta robôs de busca (Googlebot, Bingbot), bloqueia arquivos de código interno e aponta para o sitemap canônico.
-- `public/sitemap.xml`: arquivo XML no padrão oficial com namespace de imagens para indexação visual no Google Imagens.
+- `public/robots.txt`: orienta robôs de busca (Googlebot, Bingbot) e aponta diretamente para o sitemap canônico oficial.
+- `public/sitemap.xml`: arquivo XML no padrão oficial (com `lastmod` real e namespace de imagens para indexação visual no Google Imagens).
 - `public/manifest.json`: manifesto PWA para navegadores móveis e desktop, com atalhos, tema e ícones.
-- `index.html` (JSON-LD): marcação estruturada completa com:
-  - `HomeAndConstructionBusiness` & `ProfessionalService` (dados da empresa, área de atendimento Zona Leste SP, formas de pagamento, catálogo de serviços).
-  - `FAQPage` (perguntas e respostas frequentes para gerar rich snippets com sanfonas expansíveis nos resultados de busca do Google).
-  - `WebSite` (identificação da entidade na web).
+- `index.html` (JSON-LD): marcação estruturada `HomeAndConstructionBusiness` focada em dados 100% verídicos (nome oficial, URL oficial, logo real, área atendida Zona Leste de SP sem invenção de endereço/coordenadas físicas e catálogo de serviços).

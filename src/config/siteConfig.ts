@@ -50,7 +50,7 @@ export const siteConfig = {
     heroImagePath: rawHeroImagePath,
   },
   seo: {
-    siteUrl: rawSiteUrl || 'https://admconstrucoesereformas.com.br',
+    siteUrl: rawSiteUrl || 'https://admreformasemgeral.com.br',
     title:
       'ADM Construções e Reformas em Geral | Zona Leste de São Paulo',
     description:
