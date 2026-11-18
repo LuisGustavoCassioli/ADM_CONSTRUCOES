@@ -2,20 +2,16 @@ export type PortfolioCategory =
   | 'Todos'
   | 'Alvenaria e Construção'
   | 'Reformas Residenciais'
-  | 'Reformas Comerciais'
-  | 'Pisos e Revestimentos'
-  | 'Pintura e Acabamentos';
+  | 'Pisos e Revestimentos';
 
 export interface PortfolioItem {
   id: string;
   title: string;
   category: Exclude<PortfolioCategory, 'Todos'>;
   location: string;
-  description: string;
   /**
    * Caminho da foto real em `public/assets/portfolio/`.
-   * Enquanto `imageUrl` estiver vazio, o card é exibido como espaço reservado transparente
-   * para não utilizar imagens genéricas como se fossem obras realizadas pela ADM.
+   * Enquanto `imageUrl` estiver vazio, exibe indicação transparente de foto em atualização.
    */
   imageUrl?: string;
   imageAlt: string;
@@ -23,77 +19,37 @@ export interface PortfolioItem {
 
 export const portfolioCategories: PortfolioCategory[] = [
   'Todos',
-  'Alvenaria e Construção',
   'Reformas Residenciais',
-  'Reformas Comerciais',
   'Pisos e Revestimentos',
-  'Pintura e Acabamentos',
+  'Alvenaria e Construção',
 ];
 
 /**
- * Lista estruturada para receber as fotografias reais de obras executadas por Ademir.
- * Nenhum projeto fictício ou fotografia de banco de imagens é apresentada como obra pronta.
+ * Estrutura enxuta pronta para receber fotografias reais de obras executadas por Ademir.
  */
 export const portfolioItems: PortfolioItem[] = [
   {
-    id: 'slot-reforma-residencial',
-    title: 'Reforma Residencial e Ambientes Internos',
+    id: 'slot-reformas',
+    title: 'Reformas Residenciais e Comerciais',
     category: 'Reformas Residenciais',
     location: 'Zona Leste — São Paulo, SP',
-    description:
-      'Espaço reservado para fotografia real de reforma residencial (cozinha, banheiro ou área externa) executada diretamente por Ademir.',
     imageUrl: '',
-    imageAlt: 'Espaço reservado para fotografia real de reforma residencial executada pela ADM',
+    imageAlt: 'Espaço reservado para fotografia real de reformas pela ADM',
   },
   {
-    id: 'slot-pisos-revestimentos',
-    title: 'Assentamento de Pisos e Revestimentos',
+    id: 'slot-pisos-pintura',
+    title: 'Pisos, Revestimentos e Pintura',
     category: 'Pisos e Revestimentos',
     location: 'Zona Leste — São Paulo, SP',
-    description:
-      'Espaço reservado para fotografia real de aplicação de porcelanato, cerâmica e revestimento de parede.',
     imageUrl: '',
-    imageAlt: 'Espaço reservado para fotografia real de assentamento de pisos e revestimentos pela ADM',
+    imageAlt: 'Espaço reservado para fotografia real de pisos e pintura pela ADM',
   },
   {
-    id: 'slot-alvenaria-construcao',
-    title: 'Construção, Muros e Alvenaria',
+    id: 'slot-alvenaria-manutencao',
+    title: 'Construção, Alvenaria e Manutenção',
     category: 'Alvenaria e Construção',
     location: 'Zona Leste — São Paulo, SP',
-    description:
-      'Espaço reservado para fotografia real de serviço de alvenaria, reboco, contrapiso e estrutura.',
     imageUrl: '',
-    imageAlt: 'Espaço reservado para fotografia real de construção e alvenaria pela ADM',
-  },
-  {
-    id: 'slot-pintura-acabamento',
-    title: 'Pintura e Acabamentos Finais',
-    category: 'Pintura e Acabamentos',
-    location: 'Zona Leste — São Paulo, SP',
-    description:
-      'Espaço reservado para fotografia real de pintura interna/externa e acabamentos detalhados.',
-    imageUrl: '',
-    imageAlt: 'Espaço reservado para fotografia real de pintura e acabamento pela ADM',
-  },
-  {
-    id: 'slot-reforma-comercial',
-    title: 'Adequação de Espaço Comercial',
-    category: 'Reformas Comerciais',
-    location: 'Zona Leste — São Paulo, SP',
-    description:
-      'Espaço reservado para fotografia real de reforma ou manutenção em loja, salão ou escritório.',
-    imageUrl: '',
-    imageAlt: 'Espaço reservado para fotografia real de reforma comercial pela ADM',
-  },
-  {
-    id: 'slot-manutencao-telhado',
-    title: 'Manutenção Geral e Coberturas',
-    category: 'Alvenaria e Construção',
-    location: 'Zona Leste — São Paulo, SP',
-    description:
-      'Espaço reservado para fotografia real de manutenção predial, telhados e reparos executados pela ADM.',
-    imageUrl: '',
-    imageAlt: 'Espaço reservado para fotografia real de manutenção e reparos pela ADM',
+    imageAlt: 'Espaço reservado para fotografia real de alvenaria e manutenção pela ADM',
   },
 ];
-

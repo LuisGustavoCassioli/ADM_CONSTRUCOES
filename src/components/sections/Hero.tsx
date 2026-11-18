@@ -75,52 +75,40 @@ export const Hero: React.FC = () => {
                     src={siteConfig.assets.logoPath}
                     alt={`Marca ${siteConfig.business.name}`}
                     className={styles.showcaseLogo}
-                    width={112}
-                    height={112}
+                    width={104}
+                    height={104}
                   />
                 </div>
                 <div className={styles.experienceBox}>
-                  <span className={styles.expTag}>Experiência Comprovada</span>
+                  <span className={styles.expTag}>Experiência Prática</span>
                   <div className={styles.expMetric}>
                     <span className={styles.expNumber}>~10</span>
                     <span className={styles.expUnit}>anos</span>
                   </div>
                   <p className={styles.expDesc}>
-                    de atuação prática em obras, reformas e manutenção na construção civil
+                    em construção civil e reformas na Zona Leste
                   </p>
                 </div>
               </div>
 
               <div className={styles.showcaseDivider} />
 
-              <div className={styles.bentoTiles}>
-                <div className={styles.bentoTile}>
-                  <div className={styles.tileIcon}>
-                    <ServiceIcon name="user" size={18} />
-                  </div>
-                  <div>
-                    <strong>Atendimento Direto com Ademir</strong>
-                    <span>
-                      Acompanhamento pessoal do início ao fim, com ajudantes conforme a obra exige.
-                    </span>
-                  </div>
-                </div>
-
-                <div className={styles.bentoTile}>
-                  <div className={styles.tileIcon}>
-                    <ServiceIcon name="camera" size={18} />
-                  </div>
-                  <div>
-                    <strong>Orçamento Prático e Gratuito</strong>
-                    <span>
-                      Envie fotos e vídeos pelo WhatsApp ou agende uma visita presencial no local.
-                    </span>
-                  </div>
-                </div>
-              </div>
+              <ul className={styles.quickSummaryList}>
+                <li>
+                  <ServiceIcon name="check" size={16} />
+                  <span>Atendimento direto com Ademir do início ao fim</span>
+                </li>
+                <li>
+                  <ServiceIcon name="check" size={16} />
+                  <span>Orçamento por fotos/vídeos no WhatsApp ou visita</span>
+                </li>
+                <li>
+                  <ServiceIcon name="check" size={16} />
+                  <span>Imóveis residenciais e comerciais na Zona Leste</span>
+                </li>
+              </ul>
 
               <div className={styles.showcaseFooter}>
-                <span className={styles.footerPill}>Residencial e Comercial</span>
                 <span className={styles.footerPill}>Pix ou Dinheiro</span>
                 <span className={styles.footerPill}>Com Agendamento</span>
               </div>

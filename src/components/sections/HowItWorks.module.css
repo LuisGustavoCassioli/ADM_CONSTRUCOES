@@ -1,15 +1,15 @@
 .stepsGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
-  margin-bottom: 2.75rem;
+  gap: 1.15rem;
+  margin-bottom: 2.25rem;
 }
 
 .stepCard {
   background-color: var(--color-brand-white);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.35rem;
   position: relative;
   overflow: hidden;
   transition:
@@ -23,33 +23,33 @@
   background-color: var(--color-surface-light);
   border-color: rgba(244, 119, 33, 0.4);
   box-shadow: var(--shadow-md);
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
 .stepTop {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  margin-bottom: 0.85rem;
 }
 
 .stepBadge {
   display: inline-flex;
   align-items: center;
   font-family: var(--font-body);
-  font-size: 0.74rem;
+  font-size: 0.72rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   background-color: var(--color-brand-black);
   color: var(--color-brand-orange);
-  padding: 0.3rem 0.75rem;
+  padding: 0.25rem 0.65rem;
   border-radius: var(--radius-pill);
 }
 
 .stepWatermark {
   font-family: var(--font-heading);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 800;
   line-height: 1;
   color: rgba(23, 23, 23, 0.08);
@@ -61,16 +61,16 @@
 }
 
 .stepTitle {
-  font-size: 1.14rem;
+  font-size: 1.06rem;
   font-weight: 700;
   color: var(--color-brand-black);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.4rem;
 }
 
 .stepDescription {
-  font-size: 0.92rem;
+  font-size: 0.9rem;
   color: var(--color-text-secondary);
-  line-height: 1.6;
+  line-height: 1.55;
 }
 
 .actionRow {
@@ -81,18 +81,18 @@
 @media (min-width: 640px) {
   .stepsGrid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.35rem;
-    margin-bottom: 3.25rem;
+    gap: 1.25rem;
+    margin-bottom: 2.75rem;
   }
 
   .stepCard {
-    padding: 1.75rem;
+    padding: 1.5rem;
   }
 }
 
 @media (min-width: 992px) {
   .stepsGrid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
   }
 }

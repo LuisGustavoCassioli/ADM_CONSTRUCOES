@@ -17,45 +17,32 @@
   z-index: 1;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 2.5rem;
-  align-items: start;
+  gap: 2.25rem;
+  align-items: center;
 }
 
-.leadQuote {
-  font-size: 1.05rem;
-  font-weight: 500;
-  color: var(--color-brand-white);
-  line-height: 1.7;
-  margin-bottom: 1.25rem;
-  padding: 1.15rem 1.25rem;
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid var(--color-border-dark);
-  border-left: 3px solid var(--color-brand-orange);
-  border-radius: 0 var(--radius-md) var(--radius-md) 0;
-}
-
-.bodyText {
-  font-size: 0.96rem;
+.leadText {
+  font-size: 1.02rem;
   color: var(--color-text-on-dark-muted);
   line-height: 1.7;
-  margin-bottom: 1.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .audienceBox {
   background-color: var(--color-surface-dark);
   border: 1px solid var(--color-border-dark);
   border-radius: var(--radius-lg);
-  padding: 1.35rem;
-  margin-bottom: 1.75rem;
+  padding: 1.25rem;
+  margin-bottom: 1.5rem;
 }
 
 .audienceTitle {
-  font-size: 0.85rem;
+  font-size: 0.82rem;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: var(--color-brand-orange);
-  margin-bottom: 0.9rem;
+  margin-bottom: 0.85rem;
 }
 
 .audienceTags {
@@ -71,9 +58,9 @@
   background-color: rgba(255, 255, 255, 0.04);
   border: 1px solid var(--color-border-dark);
   color: var(--color-brand-white);
-  font-size: 0.84rem;
+  font-size: 0.83rem;
   font-weight: 500;
-  padding: 0.42rem 0.85rem;
+  padding: 0.4rem 0.8rem;
   border-radius: var(--radius-pill);
 }
 
@@ -83,36 +70,28 @@
 }
 
 .ctaRow {
-  margin-top: 1.5rem;
+  margin-top: 1.25rem;
 }
 
-.pillarsColumn {
+.pillarsList {
   display: flex;
   flex-direction: column;
-  gap: 1.25rem;
-}
-
-.pillarsGrid {
-  display: grid;
-  grid-template-columns: 1fr;
   gap: 1rem;
 }
 
 .pillarCard {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
   background: linear-gradient(160deg, rgba(255, 255, 255, 0.045) 0%, rgba(255, 255, 255, 0.015) 100%);
   border: 1px solid var(--color-border-dark);
   border-radius: var(--radius-lg);
-  padding: 1.4rem;
-  transition: border-color var(--transition-fast), transform var(--transition-fast);
+  padding: 1.25rem 1.35rem;
+  transition: border-color var(--transition-fast);
 }
 
 .pillarCard:hover {
   border-color: var(--color-brand-orange-border);
-  transform: translateY(-2px);
-}
-
-.pillarTop {
-  margin-bottom: 0.85rem;
 }
 
 .pillarIndex {
@@ -125,87 +104,37 @@
   color: var(--color-brand-orange);
   background-color: var(--color-brand-orange-soft);
   border: 1px solid var(--color-brand-orange-border);
-  padding: 0.25rem 0.65rem;
+  padding: 0.3rem 0.65rem;
   border-radius: var(--radius-pill);
+  flex-shrink: 0;
 }
 
 .pillarTitle {
-  font-size: 1.06rem;
+  font-size: 1.04rem;
   font-weight: 700;
   color: var(--color-brand-white);
-  margin-bottom: 0.45rem;
+  margin-bottom: 0.3rem;
 }
 
 .pillarDesc {
   font-size: 0.9rem;
   color: var(--color-text-on-dark-muted);
-  line-height: 1.55;
-}
-
-.commitmentBanner {
-  display: flex;
-  align-items: flex-start;
-  gap: 1rem;
-  padding: 1.35rem;
-  background-color: rgba(244, 119, 33, 0.09);
-  border: 1px solid var(--color-brand-orange-border);
-  border-radius: var(--radius-lg);
-}
-
-.commitmentIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.75rem;
-  height: 2.75rem;
-  border-radius: var(--radius-md);
-  background-color: var(--color-brand-orange);
-  color: var(--color-brand-black);
-  flex-shrink: 0;
-}
-
-.commitmentBanner strong {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 1rem;
-  color: var(--color-brand-white);
-  margin-bottom: 0.25rem;
-}
-
-.commitmentBanner p {
-  font-size: 0.89rem;
-  color: var(--color-text-on-dark-muted);
-  line-height: 1.55;
+  line-height: 1.5;
 }
 
 @media (min-width: 640px) {
-  .leadQuote {
-    font-size: 1.12rem;
-    padding: 1.35rem 1.5rem;
-  }
-
-  .bodyText {
-    font-size: 1rem;
+  .leadText {
+    font-size: 1.08rem;
   }
 
   .audienceBox {
-    padding: 1.5rem;
-  }
-
-  .pillarsGrid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1.25rem;
-  }
-
-  .pillarCard,
-  .commitmentBanner {
-    padding: 1.5rem;
+    padding: 1.4rem;
   }
 }
 
 @media (min-width: 992px) {
   .aboutContainer {
-    grid-template-columns: 1.05fr 0.95fr;
+    grid-template-columns: 1.1fr 0.9fr;
     gap: 3.5rem;
   }
 }

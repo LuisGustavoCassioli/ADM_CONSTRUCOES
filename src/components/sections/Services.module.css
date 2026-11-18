@@ -1,7 +1,7 @@
 .grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.25rem;
+  gap: 1.15rem;
 }
 
 .card {
@@ -10,7 +10,7 @@
   background-color: var(--color-surface-light);
   border: 1px solid var(--color-border-light);
   border-radius: var(--radius-lg);
-  padding: 1.5rem;
+  padding: 1.4rem;
   box-shadow: var(--shadow-xs);
   transition:
     transform var(--transition-fast),
@@ -19,24 +19,21 @@
 }
 
 .card:hover {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: rgba(244, 119, 33, 0.45);
 }
 
 .cardTop {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .iconBox {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 3rem;
-  height: 3rem;
+  width: 2.75rem;
+  height: 2.75rem;
   border-radius: var(--radius-md);
   background-color: var(--color-brand-orange-soft);
   color: var(--color-brand-orange);
@@ -48,55 +45,24 @@
   color: var(--color-brand-black);
 }
 
-.cardIndex {
-  font-family: var(--font-heading);
-  font-size: 0.85rem;
-  font-weight: 700;
-  color: rgba(23, 23, 23, 0.25);
-  transition: color var(--transition-fast);
-}
-
-.card:hover .cardIndex {
-  color: var(--color-brand-orange);
-}
-
 .cardTitle {
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   font-weight: 700;
   color: var(--color-brand-black);
-  margin-bottom: 0.6rem;
+  margin-bottom: 0.45rem;
 }
 
 .cardDescription {
-  font-size: 0.93rem;
+  font-size: 0.92rem;
   color: var(--color-text-secondary);
-  line-height: 1.62;
+  line-height: 1.55;
   flex-grow: 1;
-  margin-bottom: 1rem;
-}
-
-.scopeNote {
-  display: inline-flex;
-  align-items: flex-start;
-  gap: 0.45rem;
-  font-size: 0.79rem;
-  line-height: 1.45;
-  color: var(--color-text-secondary);
-  background-color: var(--color-brand-white);
-  padding: 0.55rem 0.75rem;
-  border-radius: var(--radius-sm);
-  margin-bottom: 1rem;
-}
-
-.scopeNote svg {
-  color: var(--color-brand-orange);
-  flex-shrink: 0;
-  margin-top: 2px;
+  margin-bottom: 1.1rem;
 }
 
 .cardFooter {
   margin-top: auto;
-  padding-top: 0.95rem;
+  padding-top: 0.85rem;
   border-top: 1px solid var(--color-border-light);
 }
 
@@ -105,11 +71,11 @@
   align-items: center;
   justify-content: space-between;
   font-family: var(--font-heading);
-  font-size: 0.88rem;
+  font-size: 0.86rem;
   font-weight: 600;
   color: var(--color-brand-black);
-  padding: 0.35rem 0;
-  min-height: 2.5rem;
+  padding: 0.25rem 0;
+  min-height: 2.35rem;
   transition: color var(--transition-fast);
 }
 
@@ -135,83 +101,27 @@
   transform: translateX(4px);
 }
 
-/* Summary Conversion Card */
-.summaryCtaCard {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  gap: 1.5rem;
-  background: linear-gradient(145deg, #1a1a1a 0%, #111111 100%);
-  color: var(--color-brand-white);
-  border: 1px solid var(--color-border-dark-strong);
-  border-radius: var(--radius-lg);
-  padding: 1.75rem 1.5rem;
-  box-shadow: var(--shadow-md);
-}
-
-.summaryTag {
-  display: inline-block;
-  font-size: 0.74rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-brand-orange);
-  margin-bottom: 0.6rem;
-}
-
-.summaryTitle {
-  font-size: 1.35rem;
-  color: var(--color-brand-white);
-  margin-bottom: 0.65rem;
-}
-
-.summaryText {
-  font-size: 0.92rem;
-  color: var(--color-text-on-dark-muted);
-  line-height: 1.6;
-}
-
-.summaryAction {
-  display: flex;
-  align-items: flex-start;
+.servicesNote {
+  margin-top: 1.5rem;
+  font-size: 0.88rem;
+  color: var(--color-text-muted);
+  text-align: center;
 }
 
 @media (min-width: 640px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
-    gap: 1.35rem;
+    gap: 1.25rem;
   }
 
   .card {
-    padding: 1.75rem;
-  }
-
-  .summaryCtaCard {
-    grid-column: 1 / -1;
-    flex-direction: row;
-    align-items: center;
-    padding: 2rem 2.25rem;
-  }
-
-  .summaryCtaContent {
-    max-width: 580px;
-  }
-
-  .summaryAction {
-    flex-shrink: 0;
+    padding: 1.55rem;
   }
 }
 
 @media (min-width: 1024px) {
   .grid {
     grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-  }
-
-  .summaryCtaCard {
-    grid-column: span 2;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: space-between;
+    gap: 1.4rem;
   }
 }

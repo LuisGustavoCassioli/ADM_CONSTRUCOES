@@ -15,41 +15,41 @@ export const Contact: React.FC = () => {
           <div className={styles.mainCard}>
             <SectionHeader
               eyebrow="Fale com a ADM"
-              title="Solicite seu Orçamento Gratuito pelo WhatsApp"
+              title="Solicite seu Orçamento Gratuito"
               titleId="contact-heading"
-              subtitle="Converse diretamente com Ademir. Explique o serviço que precisa realizar em seu imóvel residencial ou comercial na Zona Leste de São Paulo."
+              subtitle="Converse diretamente com Ademir pelo WhatsApp para avaliar seu serviço na Zona Leste de São Paulo."
             />
 
             <div className={styles.tipsBox}>
               <h3 className={styles.tipsTitle}>
                 <ServiceIcon name="camera" size={18} />
-                <span>Como agilizar a avaliação do seu orçamento</span>
+                <span>Para agilizar seu orçamento, envie:</span>
               </h3>
               <ul className={styles.tipsList}>
                 <li>
                   <span className={styles.tipIcon}>
                     <ServiceIcon name="check" size={14} />
                   </span>
-                  <span>Informe qual é o tipo de serviço (construção, reforma, piso, pintura, etc.);</span>
+                  <span>Tipo de serviço desejado;</span>
                 </li>
                 <li>
                   <span className={styles.tipIcon}>
                     <ServiceIcon name="check" size={14} />
                   </span>
-                  <span>Envie fotos ou um vídeo curto mostrando o local do serviço;</span>
+                  <span>Fotos ou vídeo curto do local;</span>
                 </li>
                 <li>
                   <span className={styles.tipIcon}>
                     <ServiceIcon name="check" size={14} />
                   </span>
-                  <span>Informe o bairro onde fica o imóvel (Zona Leste de São Paulo).</span>
+                  <span>Bairro na Zona Leste de SP.</span>
                 </li>
               </ul>
             </div>
 
             <div className={styles.ctaArea}>
               <WhatsAppButton
-                label="Chamar no WhatsApp para Orçamento"
+                label="Chamar no WhatsApp"
                 sectionOrigin="contact_section"
                 variant="whatsapp"
                 size="lg"
@@ -57,8 +57,8 @@ export const Contact: React.FC = () => {
 
               {!isWhatsAppConfigured && (
                 <p className={styles.pendingPhoneNotice} role="status">
-                  Nota: O número oficial de WhatsApp da ADM será ativado neste botão assim que
-                  configurado no ambiente (<code>VITE_WHATSAPP_NUMBER</code>).
+                  Nota: O número oficial de WhatsApp será ativado assim que configurado em{' '}
+                  <code>VITE_WHATSAPP_NUMBER</code>.
                 </p>
               )}
             </div>
@@ -66,8 +66,8 @@ export const Contact: React.FC = () => {
 
           <aside className={styles.infoSidebar} aria-label="Informações de atendimento">
             <div className={styles.sidebarHeader}>
-              <span className={styles.sidebarTag}>Resumo de Atendimento</span>
-              <h3>Informações Diretas</h3>
+              <span className={styles.sidebarTag}>Resumo</span>
+              <h3>Atendimento</h3>
             </div>
 
             <div className={styles.infoList}>
@@ -78,11 +78,9 @@ export const Contact: React.FC = () => {
                 <div>
                   <span className={styles.infoLabel}>Responsável</span>
                   <strong className={styles.infoValue}>
-                    {siteConfig.business.owner} ({siteConfig.business.role})
+                    {siteConfig.business.owner} • ~{siteConfig.business.experienceYears} anos de
+                    experiência
                   </strong>
-                  <span className={styles.infoSub}>
-                    Aproximadamente {siteConfig.business.experienceYears} anos de experiência
-                  </span>
                 </div>
               </div>
 
@@ -91,9 +89,8 @@ export const Contact: React.FC = () => {
                   <ServiceIcon name="location" size={18} />
                 </div>
                 <div>
-                  <span className={styles.infoLabel}>Região de Atendimento</span>
+                  <span className={styles.infoLabel}>Região</span>
                   <strong className={styles.infoValue}>{siteConfig.business.serviceArea}</strong>
-                  <span className={styles.infoSub}>Atendimento presencial no local (SP)</span>
                 </div>
               </div>
 
@@ -102,15 +99,11 @@ export const Contact: React.FC = () => {
                   <ServiceIcon name="calendar" size={18} />
                 </div>
                 <div>
-                  <span className={styles.infoLabel}>Canal e Agendamento</span>
-                  {displayPhone ? (
-                    <strong className={styles.infoValue}>{displayPhone}</strong>
-                  ) : (
-                    <strong className={styles.infoValue}>Atendimento via WhatsApp</strong>
-                  )}
-                  <span className={styles.infoSub}>
-                    Mediante agendamento prévio (sem plantão emergencial)
-                  </span>
+                  <span className={styles.infoLabel}>WhatsApp / Agendamento</span>
+                  <strong className={styles.infoValue}>
+                    {displayPhone || 'Atendimento via WhatsApp'}
+                  </strong>
+                  <span className={styles.infoSub}>Com hora marcada (sem atendimento 24h)</span>
                 </div>
               </div>
 
@@ -119,11 +112,9 @@ export const Contact: React.FC = () => {
                   <ServiceIcon name="wallet" size={18} />
                 </div>
                 <div>
-                  <span className={styles.infoLabel}>Formas de Pagamento</span>
-                  <strong className={styles.infoValue}>Pix e Dinheiro</strong>
-                  <span className={styles.infoSub}>
-                    Cobrança de mão de obra (materiais por conta do cliente)
-                  </span>
+                  <span className={styles.infoLabel}>Pagamento</span>
+                  <strong className={styles.infoValue}>Pix e Dinheiro (sem cartão)</strong>
+                  <span className={styles.infoSub}>Mão de obra • Materiais pelo cliente</span>
                 </div>
               </div>
             </div>

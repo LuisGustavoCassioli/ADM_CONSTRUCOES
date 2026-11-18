@@ -3,8 +3,8 @@
  * Nenhuma informação comercial fictícia (telefone, endereço, CNPJ ou IDs de rastreamento) é inserida aqui.
  */
 
-const rawWhatsApp = (import.meta.env.VITE_WHATSAPP_NUMBER || '').replace(/\D/g, '');
-const rawDisplayPhone = (import.meta.env.VITE_DISPLAY_PHONE || '').trim();
+const rawWhatsApp = (import.meta.env.VITE_WHATSAPP_NUMBER || '5511947225416').replace(/\D/g, '');
+const rawDisplayPhone = (import.meta.env.VITE_DISPLAY_PHONE || '(11) 94722-5416').trim();
 const rawSiteUrl = (import.meta.env.VITE_SITE_URL || '').trim().replace(/\/$/, '');
 const rawLogoPath = (import.meta.env.VITE_LOGO_PATH || '').trim();
 const rawHeroImagePath = (import.meta.env.VITE_HERO_IMAGE_PATH || '').trim();

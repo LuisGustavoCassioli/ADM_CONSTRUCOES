@@ -20,8 +20,7 @@ export const About: React.FC = () => {
             theme="dark"
           />
 
-          <blockquote className={styles.leadQuote}>{aboutContent.mainText}</blockquote>
-          <p className={styles.bodyText}>{aboutContent.secondaryText}</p>
+          <p className={styles.leadText}>{aboutContent.mainText}</p>
 
           <div className={styles.audienceBox}>
             <h3 className={styles.audienceTitle}>Imóveis atendidos na Zona Leste</h3>
@@ -37,7 +36,7 @@ export const About: React.FC = () => {
 
           <div className={styles.ctaRow}>
             <WhatsAppButton
-              label="Falar diretamente com Ademir"
+              label="Falar com Ademir"
               sectionOrigin="about"
               variant="primary"
               size="lg"
@@ -46,29 +45,16 @@ export const About: React.FC = () => {
         </div>
 
         <div className={styles.pillarsColumn}>
-          <div className={styles.pillarsGrid}>
+          <div className={styles.pillarsList}>
             {aboutContent.pillars.map((pillar, index) => (
               <div key={pillar.title} className={styles.pillarCard}>
-                <div className={styles.pillarTop}>
-                  <span className={styles.pillarIndex}>0{index + 1}</span>
+                <span className={styles.pillarIndex}>0{index + 1}</span>
+                <div>
+                  <h3 className={styles.pillarTitle}>{pillar.title}</h3>
+                  <p className={styles.pillarDesc}>{pillar.description}</p>
                 </div>
-                <h3 className={styles.pillarTitle}>{pillar.title}</h3>
-                <p className={styles.pillarDesc}>{pillar.description}</p>
               </div>
             ))}
-          </div>
-
-          <div className={styles.commitmentBanner}>
-            <div className={styles.commitmentIcon}>
-              <ServiceIcon name="shield" size={24} />
-            </div>
-            <div>
-              <strong>Compromisso e Transparência</strong>
-              <p>
-                Trabalho conduzido pessoalmente pelo responsável, sem intermediários e sem
-                terceirizar a confiança que você deposita no seu imóvel.
-              </p>
-            </div>
           </div>
         </div>
       </div>

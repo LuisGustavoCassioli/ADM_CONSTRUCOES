@@ -273,48 +273,24 @@
   margin-block: 1.25rem;
 }
 
-.bentoTiles {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
+.quickSummaryList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
   margin-bottom: 1.25rem;
 }
 
-.bentoTile {
+.quickSummaryList li {
   display: flex;
-  align-items: flex-start;
-  gap: 0.85rem;
-  padding: 0.95rem 1rem;
-  background-color: rgba(17, 17, 17, 0.55);
-  border: 1px solid var(--color-border-dark);
-  border-radius: var(--radius-md);
+  align-items: center;
+  gap: 0.65rem;
+  font-size: 0.9rem;
+  color: var(--color-brand-white);
 }
 
-.tileIcon {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2.25rem;
-  height: 2.25rem;
-  border-radius: var(--radius-sm);
-  background-color: rgba(244, 119, 33, 0.14);
+.quickSummaryList li svg {
   color: var(--color-brand-orange);
   flex-shrink: 0;
-}
-
-.bentoTile strong {
-  display: block;
-  font-size: 0.92rem;
-  font-weight: 600;
-  color: var(--color-brand-white);
-  margin-bottom: 0.15rem;
-}
-
-.bentoTile span {
-  display: block;
-  font-size: 0.82rem;
-  color: var(--color-text-on-dark-muted);
-  line-height: 1.45;
 }
 
 .showcaseFooter {

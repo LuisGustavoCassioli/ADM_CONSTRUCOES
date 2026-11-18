@@ -9,8 +9,6 @@ const conditionIcons: Record<string, IconName> = {
   'mao-de-obra': 'layers',
   materiais: 'masonry',
   pagamento: 'wallet',
-  agendamento: 'calendar',
-  garantia: 'shield',
 };
 
 export const Conditions: React.FC = () => {
@@ -18,10 +16,10 @@ export const Conditions: React.FC = () => {
     <section id="condicoes" className="section section--dark" aria-labelledby="conditions-heading">
       <div className="container">
         <SectionHeader
-          eyebrow="Clareza e Combinado Justo"
-          title="Condições de Contratação e Atendimento"
+          eyebrow="Transparência"
+          title="Condições de Atendimento"
           titleId="conditions-heading"
-          subtitle="Para que sua obra ocorra com tranquilidade do começo ao fim, trabalhamos com regras claras e combinadas antes do início do serviço."
+          subtitle="Regras claras e combinadas antes do início da obra."
           theme="dark"
         />
 
@@ -43,6 +41,11 @@ export const Conditions: React.FC = () => {
             );
           })}
         </div>
+
+        <p className={styles.conditionsNote}>
+          Não realizamos atendimento emergencial. Prazos e condições específicas de garantia são
+          combinados conforme cada serviço.
+        </p>
       </div>
     </section>
   );

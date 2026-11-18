@@ -10,9 +10,9 @@ export const HowItWorks: React.FC = () => {
       <div className="container">
         <SectionHeader
           eyebrow="Passo a Passo"
-          title="Como Funciona o Atendimento da ADM"
+          title="Como Funciona"
           titleId="how-heading"
-          subtitle="Um processo simples, direto e organizado para você solicitar seu orçamento gratuito e acompanhar sua obra sem complicação."
+          subtitle="Da primeira mensagem no WhatsApp até a conclusão do serviço."
           align="center"
         />
 
@@ -33,7 +33,7 @@ export const HowItWorks: React.FC = () => {
 
         <div className={styles.actionRow}>
           <WhatsAppButton
-            label="Iniciar meu orçamento pelo WhatsApp"
+            label="Solicitar orçamento no WhatsApp"
             sectionOrigin="how_it_works"
             variant="primary"
             size="lg"
